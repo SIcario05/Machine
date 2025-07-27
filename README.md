@@ -1,19 +1,20 @@
-# 🎈 Blank app template
+# 🫀 Heart Failure Prediction App
 
-A simple Streamlit app template for you to modify!
+This is a simple Streamlit web app that predicts the risk of a **death event** based on clinical data.
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://blank-app-template.streamlit.app/)
+### 💡 How it works
+- The model is a **MultiLayer Perceptron (MLP)** trained on the Heart Failure Clinical Records Dataset.
+- It uses 12 features (like age, serum sodium, diabetes, etc.) to predict the risk.
+- Data is preprocessed with a `StandardScaler`.
 
-### How to run it on your own machine
+### 📁 Files
+- `streamlit_app.py` — the main app
+- `heart_mlp_model.h5` — the trained model
+- `scaler.pkl` — the scaler used in preprocessing
+- `requirements.txt` — dependencies
 
-1. Install the requirements
+### ▶️ How to run
 
-   ```
-   $ pip install -r requirements.txt
-   ```
-
-2. Run the app
-
-   ```
-   $ streamlit run streamlit_app.py
-   ```
+```bash
+pip install -r requirements.txt
+streamlit run streamlit_app.py
