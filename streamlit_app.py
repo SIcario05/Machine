@@ -3,11 +3,13 @@ import numpy as np
 from tensorflow.keras.models import load_model
 import pickle
 
-# load model and scaler
-model = load_model("heart_mlp_model.keras", compile=False)
+# Load the trained model
+model = load_model("heart_mlp_model.h5", compile=False)
 
+# Load the scaler
 with open("scaler.pkl", "rb") as f:
     scaler = pickle.load(f)
+
 
 st.title("🫀 Heart Failure Prediction App")
 
